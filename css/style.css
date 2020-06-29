@@ -35,6 +35,10 @@
     font-weight:600;
 }
 
+.grey{
+    color: #585858;
+}
+
 .top-bar, .bottom{
     position: fixed;
     width: 100%;
@@ -44,10 +48,7 @@
 
 .top-bar{
     top: 0;
-}
-
-.bottom{
-    bottom: 0;
+    padding-top: 2%;
 }
 
 .top-bar ul{
@@ -72,10 +73,11 @@
 }
 
 .bottom{
+    bottom: 0;
     display: flex;
     align-items: flex-end;
     margin: 0;
-    padding: 0;
+    padding: 0 0 2% 0;
     text-align: center;
 }
 
@@ -90,9 +92,11 @@
 }
 
 #fullpage{
-    margin: 0 20px;
+    /* margin: 0 20px; */
     padding: 20px 50;
-    
+    background-image: url(../resources/ss.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .section{
@@ -142,4 +146,52 @@
 
 .box-content ul{
     list-style: none;
+}
+
+.page-heading{
+    padding-bottom:5%;
+}
+
+.project-outerbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:5%;
+    padding: 2% 5%;
+}
+
+.project-box{
+    box-shadow: 0 5px 10px 1px #EBEBEB;
+    border-radius: 3px;
+}
+
+.project-img{
+    background-color: black;
+}
+
+.project-img img{
+    width:100%;
+    opacity:0.7;
+}
+
+.project-content{
+    padding:3% 4%;
+}
+
+@media(max-width:400px){
+    .skill-outerbox{
+        justify-content: center;
+        
+    }
+
+    .skill-box{
+        flex:1 0 100%;
+    }
+
+    .section{
+        padding: 0 11%;
+    }
+
+    .page-heading{
+        padding-bottom:10px;
+    }
 }
