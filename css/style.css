@@ -1,3 +1,145 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+.f-14{
+    font-size: 14px;
+}
+
+.f-18{
+    font-size: 18px;
+}
+
+.f-20{
+    font-size: 20px;
+}
+
+.f-30{
+    font-size: 26px;
+}
+
+.f-36{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.regular{
+    font-weight: 400;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.sbold{
+    font-weight:600;
+}
+
+.top-bar, .bottom{
+    position: fixed;
+    width: 100%;
+    display: block;
+    z-index: 9;
+}
+
+.top-bar{
+    top: 0;
+}
+
+.bottom{
+    bottom: 0;
+}
+
+.top-bar ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar ul li{
+    list-style: none;
+    /* line-height: 80px; */
+    padding: 25px 32px;
+}
+
+.top-bar ul li div{
+    text-align: center;
+}
+
+.top-bar ul li .about{
+    text-align: right;
+}
+
+.bottom{
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.bottom div{
+    padding: 25px 32px;
+
+}
+
+.social-m ul{
+    list-style: none;
+    flex-direction: column;
+}
+
+#fullpage{
+    margin: 0 20px;
+    padding: 20px 50;
+    
+}
+
+.section{
+    padding: 0 15%;
+    /*background-color: aliceblue; */
+}
+
+.intro-content{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-img{
+    text-align: center;
+}
+
+.intro-img img{
+    width: 70%;
+}
+
+.scroll{
+    text-align: center;
+    position: relative;
+    top: 23%;
+}
+
+.title{
+    border-left: 1px solid black;
+    padding-left:8px;
+}
+
+.skill-outerbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 0;
+    justify-content: space-around;
+    padding-top:4%;
+}
+
+.skill-box{
+    background-color: #EBEBEB;
+    flex: 0 1 40%;
+    padding:2% 0;
+}
+
+.box-content ul{
+    list-style: none;
+}
