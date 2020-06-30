@@ -1,5 +1,11 @@
 *{
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.2px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 .f-14{
@@ -39,6 +45,10 @@
     color: #585858;
 }
 
+.ls{
+    letter-spacing: 1.7px;
+}
+
 .top-bar, .bottom{
     position: fixed;
     width: 100%;
@@ -72,13 +82,13 @@
     text-align: right;
 }
 
+.logo img{
+    width: 45px;
+}
+
 .bottom{
     bottom: 0;
-    display: flex;
-    align-items: flex-end;
     margin: 0;
-    padding: 0 0 2% 0;
-    text-align: center;
 }
 
 .bottom div{
@@ -86,15 +96,28 @@
 
 }
 
+.contact{
+    position: fixed;
+    bottom: 3%;
+    left: 2.2%;
+    
+}
+
+.social-m{
+    position: fixed;
+    bottom: 3%;
+    right: 2.5%;
+}
+
+
 .social-m ul{
     list-style: none;
-    flex-direction: column;
 }
 
 #fullpage{
     /* margin: 0 20px; */
     padding: 20px 50;
-    background-image: url(../resources/ss.jpg);
+    /* background-image: url(../resources/ss.jpg); */
     background-size: cover;
     background-position: center;
 }
@@ -141,31 +164,25 @@
 .skill-box{
     background-color: #EBEBEB;
     flex: 0 1 40%;
-    padding:2% 0;
+    padding:1% 0;
 }
 
 .box-content ul{
     list-style: none;
 }
 
-.page-heading{
-    padding-bottom:5%;
-}
-
 .project-outerbox{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap:5%;
-    padding: 2% 5%;
+    padding: 4% 5% 2% 5%;
 }
 
 .project-box{
     box-shadow: 0 5px 10px 1px #EBEBEB;
-    border-radius: 3px;
-}
-
-.project-img{
-    background-color: black;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    z-index: 100;
 }
 
 .project-img img{
@@ -174,7 +191,36 @@
 }
 
 .project-content{
-    padding:3% 4%;
+    padding:3% 5%;
+}
+
+.about-outerbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 6%;
+    padding-top: 5%;
+}
+
+.about-content, .about-contact{
+    padding-right: 3%;
+}
+
+.about-contact{
+    padding-left: 3%;
+    
+}
+
+.contact-box{
+    background-color: #EBEBEB;
+    padding: 10%;
+}
+
+.know-btn{
+    background: black;
+    color: white;
+    border-radius: 3px;
+    padding:5px 8px;
+    margin-top:2%;
 }
 
 @media(max-width:400px){
