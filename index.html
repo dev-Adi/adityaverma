@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/fullpage.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
 </head>
 
@@ -21,7 +22,7 @@
             <ul>
                 <li style="flex-grow:1">
                     <div class="logo f-14">
-                        <a href = "#"><img src="./resources/my logo.png" alt=""></a>
+                        <a href="#"><img src="./resources/my logo.png" alt=""></a>
                     </div>
                 </li>
                 <li style="flex-grow:9"></li>
@@ -32,11 +33,21 @@
                 </li>
                 <li style="flex-grow:1">
                     <div class="menu-icon ">
-                        <a href=""><i class="fas fa-bars fa-lg"></i></a>
+                        <button onclick="reveal()"><i class="fas fa-bars fa-lg"></i></button>
                     </div>
                 </li>
             </ul>
         </div>
+
+        <nav class="" id="menu">
+            <ul class="f-20 sbold">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Skills</a></li>
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </nav>
 
         <div id="fullpage">
 
@@ -118,12 +129,12 @@
                             <div class="project-content">
                                 <span class="f-14 grey">Web and Android</span><br>
                                 <span class="f-20 sbold">Continuity</span><br>
-                                <span class="f-14">Lorem ipsum dolor kasjdh kjadsh kjadsh kjshd shda hsahd</span>
+                                <span class="f-14 proj-intro">Lorem ipsum dolor kasjdh kjadsh kjadsh kjshd shda hsahd</span>
                             </div>
                         </div>
                     </a>
 
-                    <a href="">  
+                    <a href="">
                         <div class="project-box">
                             <div class="project-img">
                                 <img src="./resources/voice.jpg" alt="voice">
@@ -131,7 +142,7 @@
                             <div class="project-content">
                                 <span class="f-14 grey">Windows</span><br>
                                 <span class="f-20 sbold">Voice Assistant</span><br>
-                                <span class="f-14">Lorem ipsum dolor kasjdh kjadsh kjadsh kjshd shda hsahd</span>
+                                <span class="f-14 proj-intro">Lorem ipsum dolor kasjdh kjadsh kjadsh kjshd shda hsahd</span>
                             </div>
                         </div>
                     </a>
@@ -141,7 +152,7 @@
             </section>
 
             <section class="section">
-                
+
                 <div class="project-outerbox">
                     <a href="">
                         <div class="project-box">
@@ -151,7 +162,7 @@
                             <div class="project-content">
                                 <span class="f-14 grey">Web</span><br>
                                 <span class="f-20 sbold">Transeco</span><br>
-                                <span class="f-14">Lorem ipsum dolor kasjdh kjadsh kjadsh kjshd shda hsahd</span>
+                                <span class="f-14 proj-intro">Lorem ipsum dolor kasjdh kjadsh kjadsh kjshd shda hsahd</span>
                             </div>
                         </div>
                     </a>
@@ -164,7 +175,7 @@
                             <div class="project-content">
                                 <span class="f-14 grey">Wordpress</span><br>
                                 <span class="f-20 sbold">Inhibeo</span><br>
-                                <span class="f-14">Lorem ipsum dolor kasjdh kjadsh kjadsh kjshd shda hsahd</span>
+                                <span class="f-14 proj-intro">Lorem ipsum dolor kasjdh kjadsh kjadsh kjshd shda hsahd</span>
                             </div>
                         </div>
                     </a>
@@ -183,18 +194,21 @@
                         <p>I am Aditya Verma</p>
                         <span class="f-30 bold">Web Developer</span><br>
                         <span class="f-30 bold">UI / UX Designer</span>
-                        <p>focus to learn something new and complete the old.<br>I can work closely with designers and back-end engineers, as a sole front-end or in Agile teams.
+                        <p>focus to learn something new and complete the old.<br>I can work closely with designers and
+                            back-end engineers, as a sole front-end or in Agile teams.
                         </p>
                         <a href=""><span class="f-14 know-btn">Know More</span></a>
                     </div>
 
                     <div class="about-contact">
                         <div class="contact-box">
-                            <p class="f-14">Interested in working together? Feel free to contact me for any project or collaboration.
+                            <p class="f-14">Interested in working together? Feel free to contact me for any project or
+                                collaboration.
                             </p>
                             <br>
-                            <a href="mailto:adityasrsasl@gmail.com" target="_blank"><i class="fas fa-envelope fa-sm"></i></a> <span>&nbsp; adityasrsasl@gmail.com</span>
-                            <br><br>
+                            <a href="mailto:adityasrsasl@gmail.com" target="_blank"><i
+                                    class="fas fa-envelope fa-sm"></i></a> <span>&nbsp; adityasrsasl@gmail.com</span>
+                            <br><br id="abt-br">
                             <i class="fas fa-phone-alt fa-sm"></i> <span>&nbsp; +91 9993701075</span>
                         </div>
                     </div>
@@ -204,8 +218,8 @@
         </div>
 
         <div class="bottom">
-            <div class="contact f-14 ls" >
-                <a href=".bottom">Contact</a> 
+            <div class="contact f-14 ls">
+                <a href="">Contact</a>
             </div>
             <div class="social-m">
                 <ul>
@@ -213,10 +227,12 @@
                         <a href="mailto:adityasrsasl@gmail.com"><i class="fas fa-envelope fa-sm"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/dev-aditya/" target="_blank"><i class="fab fa-linkedin-in fa-sm"></i></a>
+                        <a href="https://www.linkedin.com/in/dev-aditya/" target="_blank"><i
+                                class="fab fa-linkedin-in fa-sm"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/the_aditya_verma/?hl=en" target="_blank"><i class="fab fa-instagram fa-sm"></i></a>
+                        <a href="https://www.instagram.com/the_aditya_verma/?hl=en" target="_blank"><i
+                                class="fab fa-instagram fa-sm"></i></a>
                     </li>
                     <li>
                         <a href="https://github.com/dev-Adi" target="_blank"><i class="fab fa-github fa-sm"></i></a>
@@ -230,7 +246,9 @@
     <script src="https://kit.fontawesome.com/f14f9db7b3.js" crossorigin="anonymous"></script>
     <script src="./js/fullpage.min.js"></script>
     <script src="js/javas.js"></script>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
+     -->
 </body>
 
 </html>

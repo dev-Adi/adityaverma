@@ -5,6 +5,9 @@
 
 a{
     text-decoration: none;
+}
+
+.top-bar a, .bottom a, .about-outerbox a, .project-outerbox a{
     color: black;
 }
 
@@ -84,6 +87,48 @@ a{
 
 .logo img{
     width: 45px;
+}
+
+.menu-icon button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav{
+    position: absolute;
+    left: -40%;
+    top: 0;
+    height: 100vh;
+    width: 30%;
+    background-color: black;
+    color: white;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.menu-active{
+    left: 0;
+}
+
+nav button{
+    float: right;
+    padding:5%;
+}
+
+nav ul{
+    list-style: none;
+    padding-top: 45%;
+    
+}
+
+nav li{
+    padding: 4%;
+}
+
+nav a{
+    color: white;
+    letter-spacing: 2px;
 }
 
 .bottom{
@@ -223,10 +268,54 @@ a{
     margin-top:2%;
 }
 
+@media(max-width:900px){
+    .intro-content{
+        flex-direction: column-reverse;
+    }
+
+    .intro-text{
+        padding-top: 7%;
+    }
+
+    .scroll{
+        top:15%;
+    }
+
+    .page-heading{
+        padding-bottom: 7%;
+    }
+
+    .project-outerbox{
+        padding:4% 3% 2% 3%;
+    }
+
+    .about-contact{
+        padding: 0;
+    }
+
+    .contact-box{
+        padding: 8% 1% 8% 3%;
+    }
+
+    .skill-box{
+        flex: 0 1 45%;
+    }
+
+    .about-outerbox{
+        grid-gap:0%;
+    }
+}
+
 @media(max-width:400px){
+
+    nav{
+        width: 60%;
+        left: -60%;
+    }
+
     .skill-outerbox{
         justify-content: center;
-        
+        padding-right: 5%;
     }
 
     .skill-box{
@@ -239,5 +328,40 @@ a{
 
     .page-heading{
         padding-bottom:10px;
+    }
+
+    .bottom div{
+        padding: 20px 20px 10px 20px;
+    }
+
+    .social-m ul{
+        margin: 0;
+    }
+
+    .project-outerbox{
+        grid-template-columns: 1fr;
+        padding: 5% 3% 2% 3%;
+    }
+
+    .proj-intro{
+        display: none;
+    }
+
+    .about-outerbox{
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .about-content{
+        padding: 0 0 3% 0;
+    }
+
+    .contact-box{
+        padding: 2%;
+        margin-right: 2%;
+    }
+
+    #abt-br{
+        display: none;
     }
 }
