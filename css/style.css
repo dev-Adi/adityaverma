@@ -5,6 +5,32 @@
 
 a{
     text-decoration: none;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-property: all;
+    position: relative;
+}
+
+li a:hover{
+    border-bottom: 1px solid #d1d1d1;
+    bottom: 5px;
+}
+
+.contact a:hover{
+    border-bottom: 1px solid #d1d1d1;
+    bottom: 5px;
+}
+
+.hi, .nm, .cs, .intro-img{
+    position: relative;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+.hi:hover, .nm:hover, .cs:hover, .intro-img:hover{
+    bottom: 5px;
+    left: 5px;
 }
 
 .top-bar a, .bottom a, .about-outerbox a, .project-outerbox a{
@@ -196,6 +222,14 @@ nav a{
 .title{
     border-left: 1px solid black;
     padding-left:8px;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+.title:hover{
+    bottom: 5px;
+    left: 5px;
 }
 
 .skill-outerbox{
@@ -210,6 +244,14 @@ nav a{
     background-color: #EBEBEB;
     flex: 0 1 40%;
     padding:1% 0;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+.skill-box:hover{
+    border: 1px solid black;
+    background-color: white;
 }
 
 .box-content ul{
@@ -228,11 +270,26 @@ nav a{
     border-radius: 5px;
     border: 1px solid #bdbdbd;
     z-index: 100;
+    position: relative;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
+.project-box:hover{
+    top: 5px;
 }
 
 .project-img img{
     width:100%;
     opacity:0.7;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
+.project-img img:hover{
+    opacity: 1;
 }
 
 .project-content{
@@ -258,6 +315,14 @@ nav a{
 .contact-box{
     background-color: #EBEBEB;
     padding: 10%;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
+.contact-box:hover{
+    background-color: white;
+    border: 1px solid black;
 }
 
 .know-btn{
@@ -266,6 +331,27 @@ nav a{
     border-radius: 3px;
     padding:5px 8px;
     margin-top:2%;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
+.know-btn:hover{
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+}
+
+.wrk{
+    position: relative;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+
+.wrk:hover{
+    bottom: 5px;
+    left: 5px;
 }
 
 @media(max-width:900px){
@@ -306,7 +392,7 @@ nav a{
     }
 }
 
-@media(max-width:400px){
+@media(max-width:420px){
 
     nav{
         width: 60%;
@@ -363,5 +449,209 @@ nav a{
 
     #abt-br{
         display: none;
+    }
+
+    .f-18{
+        font-size: 16px;
+    }
+
+    .f-36{
+        font-size: 33px;
+    }
+
+    .f-20{
+        font-size: 18px;
+    }
+}
+
+@media(max-width:370px){
+
+    .logo img{
+        width:35px;
+    }
+
+    .intro-img img{
+        width: 60%;
+    }
+
+    .f-36{
+        font-size: 28px;
+    }
+
+    .f-30{
+        font-size: 20px;
+    }
+
+    .f-20{
+        font-size: 16px;
+    }
+
+    .f-18{
+        font-size: 14px;
+    }
+
+    .f-14{
+        font-size: 13px;
+    }
+
+    .scroll{
+        top:11%;
+    }
+    
+    .top-bar{
+        padding-top: 0;
+    }
+
+    .top-bar ul li{
+        padding: 20px;
+    }
+
+    .bottom div{
+        padding: 0 20px;
+    }
+
+    .page-heading{
+        padding-bottom: 0;
+    }
+
+    .skill-outerbox ul{
+        margin: 7px;;
+    }
+
+    .project-box{
+        width: 90%;
+    }
+
+    .about-content{
+        padding: 3% 3% 4% 0;
+    }
+
+    .about-content p{
+        font-size: 14px;
+    }
+
+    .iam{
+        display: none;
+    }
+
+    .contact-box{
+        margin-right: 3%;
+    }
+}
+
+/* Animations */
+
+.scroll-icon{
+    position: relative;
+    animation-name: scrolldown;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrolldown{
+    0%{
+        top:0;
+    }
+
+    50%{
+        top:7px;
+    }
+
+    100%{
+        top:0;
+    }
+}
+
+.hi{
+    position: relative;
+    animation-name: ahi;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 900ms;
+}
+
+@keyframes ahi{
+    0%{
+        right:20px;
+        opacity: 0;
+    }
+
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+}
+
+.nm{
+    position: relative;
+    animation-name: anm;
+    animation-delay: 900ms;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}
+
+@keyframes anm{
+    0%{
+        top: 30px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.cs{
+    position: relative;
+    animation-name:acs;
+    animation-duration: 900ms;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes acs{
+    0%{
+        top: 10px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.title{
+    position: relative;
+    animation-name: title;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes title{
+    0%{
+        left: 15px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.intro-img{
+    animation-name: reveal;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    animation-delay: 600ms;
+}
+
+@keyframes reveal{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
